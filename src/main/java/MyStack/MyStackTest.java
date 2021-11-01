@@ -3,45 +3,45 @@ package MyStack;
 
 public class MyStackTest {
     public static void main(String[] args) {
-        MyStackInterface<String> stringMyStack = new MyStack<String>();
+        MyStack<String> stringMyStack = new MyStackImpl<String>();
 
         stringMyStack.push("qwe");
         stringMyStack.push("rty");
         stringMyStack.push("asd");
-        MyStackInterface<Integer> integerMyStack = new MyStack<Integer>();
+        MyStack<Integer> integerMyStack = new MyStackImpl<Integer>();
         for (int i = 0; i < 12; i++) {
             integerMyStack.push(i);
         }
-        System.out.println("get(0): " + stringMyStack.get(0));
-        System.out.println("peek(): " + stringMyStack.peek());
+        System.out.println("strings size: " + stringMyStack.size());
+        System.out.println("integer size: " + integerMyStack.size());
         System.out.println("-------------------");
-        System.out.println(integerMyStack.get(0));
+        System.out.println("string peek(): " + stringMyStack.peek());
         System.out.println("-------------------");
-        System.out.println(stringMyStack.remove(1));
-        System.out.println(integerMyStack.remove(7));
+        System.out.println("integer peek(): " + integerMyStack.peek());
         System.out.println("-------------------");
-        System.out.println(stringMyStack.get(0));
-        System.out.println(stringMyStack.get(1));
-
-        System.out.println(stringMyStack.peek());
-        System.out.println(integerMyStack.get(7));
-        System.out.println(integerMyStack.get(9));
+        System.out.println("string remove(): " + stringMyStack.remove(1));
+        System.out.println("integer remove(): " + integerMyStack.remove(1));
         System.out.println("-------------------");
-        System.out.println(stringMyStack.pop());
-        System.out.println(integerMyStack.pop());
+        System.out.println("string peek(): " + stringMyStack.peek());
+        System.out.println("integer peek(): " + integerMyStack.peek());
         System.out.println("-------------------");
-        System.out.println(stringMyStack.peek());
-        System.out.println(integerMyStack.peek());
+        System.out.println("string poll(): " + stringMyStack.pop());
+        System.out.println("integer poll(): " + integerMyStack.pop());
         System.out.println("-------------------");
-
+        System.out.println("after poll string peek(): " + stringMyStack.peek());
+        System.out.println("after poll integer peek(): " + integerMyStack.peek());
+        System.out.println("-------------------");
+        System.out.println("strings size: " + stringMyStack.size());
+        System.out.println("integer size: " + integerMyStack.size());
+        System.out.println("-------------------");
         stringMyStack.clear();
         integerMyStack.clear();
         for (int i = 0; i < stringMyStack.size(); i++) {
-            System.out.println(stringMyStack.get(i));
+            System.out.println(stringMyStack.peek());
         }
         System.out.println("***************");
         for (int i = 0; i < integerMyStack.size(); i++) {
-            System.out.println(integerMyStack.get(i));
+            System.out.println(integerMyStack.peek());
         }
     }
 }

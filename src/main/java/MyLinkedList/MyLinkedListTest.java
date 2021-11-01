@@ -6,7 +6,7 @@ import java.util.List;
 
 public class MyLinkedListTest {
     public static void main(String[] args) {
-        MyLinkedListInterface<String> stringMyLinkedList = new MyLinkedList<String>();
+        MyLinkedList<String> stringMyLinkedList = new MyLinkedListImpl<String>();
         List<String> stringLinkedList  = new LinkedList<String>();
         stringLinkedList.add("qwe");
         stringLinkedList.add("rty");
@@ -14,7 +14,7 @@ public class MyLinkedListTest {
         stringMyLinkedList.add("qwe");
         stringMyLinkedList.add("rty");
         stringMyLinkedList.add("asd");
-        MyLinkedList<Integer> integerMyLinkedList = new MyLinkedList<Integer>();
+        MyLinkedListImpl<Integer> integerMyLinkedList = new MyLinkedListImpl<Integer>();
         for (int i = 0; i < 12; i++) {
             integerMyLinkedList.add(i);
         }

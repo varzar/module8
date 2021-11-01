@@ -2,8 +2,8 @@ package MyHashMap;
 
 public class MyHashMapTest {
     public static void main(String[] args) {
-        MyHashMapInterface<String, Integer> myHashMap = new MyHashMap<String, Integer>(64);
-        MyHashMapInterface<String, Integer> myHashMap2 = new MyHashMap<String, Integer>();
+        MyHashMap<String, Integer> myHashMap = new MyHashMapImpl<String, Integer>(64);
+        MyHashMap<String, Integer> myHashMap2 = new MyHashMapImpl<String, Integer>();
         myHashMap.put("KING", 100);
         myHashMap.put("BLAKE", 10);
         myHashMap.put("KING", 50);
