@@ -1,9 +1,10 @@
-package MyStack;
+package MyQueue;
+
 
 
 import java.util.Objects;
 
-public class MyStackImpl<E>  implements MyStack<E> {
+public class MyQueueImpl<E> implements MyQueue<E> {
 
     private static class  Node <E> {
         Node<E> prev;
@@ -36,7 +37,7 @@ public class MyStackImpl<E>  implements MyStack<E> {
     }
 
     @Override
-    public void push(Object o) {
+    public void add(Object o){
         Node<E> lastNode = last;
         Node<E> newNode = new Node<E>(lastNode, (E)o, null);
         last = newNode;
@@ -86,11 +87,11 @@ public class MyStackImpl<E>  implements MyStack<E> {
 
     @Override
     public E peek() {
-        return (E) last.element;
+        return (E) first.element;
     }
 
     @Override
-    public E pop() {
-        return remove(size() - 1);
+    public E poll() {
+        return remove(0);
     }
 }
