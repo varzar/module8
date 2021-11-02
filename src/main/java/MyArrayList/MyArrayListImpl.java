@@ -8,7 +8,6 @@ public class MyArrayListImpl<E> implements MyArrayList<E> {
     int size = 0;
     private static final int DEFAULT_CAPACITY = 10;
     private final static float LOAD_FACTOR =  1f + 3f/2f;
-    private int cursorIndex = 0;
 
     public MyArrayListImpl(int initialCapacity) {
            if (initialCapacity > DEFAULT_CAPACITY ){
