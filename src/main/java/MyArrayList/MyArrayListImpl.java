@@ -25,13 +25,12 @@ public class MyArrayListImpl<E> implements MyArrayList<E> {
     @Override
     public void add(Object value) {
         Object[] temp = items;
-        if(items.length <= cursorIndex) {
+        if(items.length <= size) {
             int reSize = (int) (temp.length * LOAD_FACTOR);
             items = (E[]) new Object[reSize];
             System.arraycopy(temp, 0, items, 0, temp.length);
         }
-        items[cursorIndex] = value;
-        cursorIndex++;
+        items[size] = value;
         size++;
     }
 
